@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "TCBS-CLI | Production-Ready Project Scaffolding",
-    description: "Instantly generate production-ready boilerplates for Mobile, Backend, and Web projects.",
+    description: "Instantly generate production-ready boilerplates for React Native Hybrid Mobile, Backend, and Web projects.",
     url: "https://tcbs-cli.com",
     siteName: "TCBS-CLI",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TCBS-CLI | Production-Ready Project Scaffolding",
-    description: "Instantly generate production-ready boilerplates for Mobile, Backend, and Web projects.",
+    description: "Instantly generate production-ready boilerplates for React Native Hybrid Mobile, Backend, and Web projects.",
     site: "@tcbs_cli",
     images: ["/TCBS.png"]
   },
