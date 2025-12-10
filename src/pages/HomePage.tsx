@@ -2,14 +2,17 @@
 import React from "react";
 import CodeBlock from "../components/CodeBlock";
 import FeatureCard from "../components/FeatureCard";
+import { useRouter } from "next/navigation";
 
 export interface HomePageProps {
   setCurrentPage: (page: string) => void;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => (
-  <main className="min-h-screen pt-16 pb-20 bg-gray-50">
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
+  const router = useRouter();
+  return (
+    <main className="min-h-screen pt-16 pb-20 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 className="text-6xl sm:text-7xl font-extrabold tracking-tight text-gray-900 mb-6">
         <span className="block text-indigo-600">Stop Rebuilding.</span>
         <span className="block text-gray-800 mt-2">Start Creating.</span>
@@ -35,11 +38,18 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => (
         <div className="grid md:grid-cols-2 gap-8 text-left">
           <FeatureCard 
             title="React Native (Mobile)"
-            description="Production-ready boilerplate with integrated Redux/MobX, navigation setup, and a full component library."
+            description="Production-ready boilerplate with integrated Redux/MobX, navigation setup, and a full component library. Includes @tcbs/react-native-mazic-ui."
             icon="📱"
             cta="See Details"
             onClick={() => setCurrentPage('features')}
-          />
+          >
+            <button
+              className="text-indigo-600 font-semibold hover:text-indigo-800 transition duration-150 ease-in-out text-left"
+              onClick={() => router.push('/ui-home')}
+            >
+              react-native-mazic-ui &rarr;
+            </button>
+          </FeatureCard>
           <FeatureCard 
             title="Node.js Server (Backend)"
             description="Scaffold Express/NestJS APIs with pre-configured authentication, logging, and database connections (TS Ready)."
@@ -64,7 +74,8 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => (
         </div>
       </section>
     </div>
-  </main>
-);
+    </main>
+  );
+};
 
 export default HomePage;

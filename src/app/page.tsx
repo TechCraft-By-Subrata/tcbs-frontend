@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import HomePage from "../pages/HomePage";
 import FeaturesPage from "../pages/FeaturesPage";
 import ContributePage from "../pages/ContributePage";
+import FeatureDetail from "../pages/FeatureDetail";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -17,6 +18,8 @@ const App = () => {
         return <FeaturesPage />;
       case "contribute":
         return <ContributePage />;
+      case "feature-detail":
+        return <FeatureDetail />;
       default:
         return <HomePage setCurrentPage={setCurrentPage} />;
     }
