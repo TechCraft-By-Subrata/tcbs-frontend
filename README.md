@@ -59,8 +59,6 @@ Support this project: [GitHub Sponsors](https://github.com/sponsors/subraatakuma
 
 ## License
 
-MIT
-
 MIT License
 
 Copyright (c) Subrata Kumar Das
