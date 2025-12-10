@@ -36,10 +36,16 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, command = false, copyTe
         </div>
       )}
       <pre
-        className={`p-4 text-sm overflow-x-auto font-mono`}
+        className={`p-4 text-sm overflow-x-auto font-mono text-left`}
         style={command ? { color: colors.lightText, background: colors.codeBg } : { color: colors.text, background: colors.background }}
       >
-        <code>{children}</code>
+          <code>
+            {typeof children === "string"
+              ? children.split("\n").map((line, idx) => (
+                  <div key={idx}>{line}</div>
+                ))
+              : children}
+          </code>
       </pre>
       <button
         onClick={handleCopy}

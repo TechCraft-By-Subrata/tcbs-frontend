@@ -19,20 +19,17 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => (
       </p>
       <h2 className="text-lg font-semibold text-gray-600 mb-4">Quick Start Installation:</h2>
       <CodeBlock command copyText="npx tcbs new">
-        $ npx tcbs new
-        ? What is the name of your new project? my-pro-app
-        ? Which kind of project would you like to create? (my-pro-app)
-        ❯ React Native (Mobile)
-          Node.js Server (Backend)
-          Next.js App (Full-Stack/Frontend)
+        {`$ npx tcbs new 
+      ? What is the name of your new project? my-pro-app
+      ? Which kind of project would you like to create? (my-pro-app)
+      ❯ React Native (Mobile)
+        Node.js Server (Backend)
+        React App (Frontend)
+        Next.js App (Full-Stack/Frontend)
+
         
-        🎉 Project created successfully!
+      🎉 Project created successfully!`}
       </CodeBlock>
-      <p className="mt-10 text-lg text-gray-700">
-        Already know your project type? Use direct commands: 
-        <span className="font-mono text-indigo-600 font-semibold ml-2">npx tcbs new rn</span>, 
-        <span className="font-mono text-indigo-600 font-semibold ml-2">new server</span>, etc.
-      </p>
       <section className="mt-20">
         <h2 className="text-4xl font-bold text-gray-900 mb-8">Four Ecosystems. One CLI.</h2>
         <div className="grid md:grid-cols-2 gap-8 text-left">
