@@ -20,6 +20,11 @@ const UiHomeMain: React.FC = () => (
             2. How to use TcbsButton
           </Link>
         </li>
+        <li>
+          <Link href="/" className="block px-6 py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 font-semibold text-lg hover:bg-gray-100 transition">
+            ← Go to Website Home
+          </Link>
+        </li>
       </ul>
     </div>
   </main>

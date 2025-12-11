@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { colors } from "../styles/colors";
 
-export interface HeaderProps {
+interface HeaderProps {
   currentPage: string;
   setCurrentPage: (page: string) => void;
 }
@@ -14,22 +15,22 @@ interface NavLinkProps {
 
 const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
   const navItems = [
-    { name: "Home", path: "home" },
-    { name: "Features", path: "features" },
-    { name: "Contribute", path: "contribute" },
+    { name: "Home", path: "/" },
+    { name: "Features", path: "/features" },
+    { name: "Contribute", path: "/contribute" },
   ];
 
   const NavLink: React.FC<NavLinkProps> = ({ name, path }) => (
-    <button
-      onClick={() => setCurrentPage(path)}
-      style={currentPage === path
+    <Link
+      href={path}
+      style={currentPage === path.replace("/", "")
         ? { background: colors.primary, color: "#fff", boxShadow: "0 2px 8px rgba(79,70,229,0.15)" }
         : { color: colors.text, background: colors.background }
       }
-      className={`px-3 py-2 rounded-lg text-sm font-medium transition duration-150 ease-in-out ${currentPage === path ? "hover:bg-indigo-700" : "hover:text-indigo-600 hover:bg-gray-100"}`}
+      className={`px-3 py-2 rounded-lg text-sm font-medium transition duration-150 ease-in-out ${currentPage === path.replace("/", "") ? "hover:bg-indigo-700" : "hover:text-indigo-600 hover:bg-gray-100"}`}
     >
       {name}
-    </button>
+    </Link>
   );
 
   return (
