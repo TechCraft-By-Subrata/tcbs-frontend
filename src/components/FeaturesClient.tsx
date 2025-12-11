@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 const FeaturesClient: React.FC = () => (
   <>
-    <Header currentPage="features" />
+    <Header currentPage="features" setCurrentPage={() => {}} />
     <main className="min-h-screen pt-8 pb-12 bg-white">
       <div className="max-w-5xl mx-auto px-2 sm:px-4 lg:px-8">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4 border-b pb-2">Project Features Overview</h1>

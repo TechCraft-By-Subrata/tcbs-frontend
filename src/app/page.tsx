@@ -21,7 +21,10 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased">
-      <Header currentPage={pathname.replace("/","") || "home"} setCurrentPage={() => {}} />
+      <Header
+        currentPage={typeof pathname === "string" ? pathname.replace("/","") || "home" : "home"}
+        setCurrentPage={() => {}}
+      />
       {pageContent}
       <Footer />
     </div>
