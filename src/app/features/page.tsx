@@ -7,13 +7,13 @@ import Header from "../../components/Header";
 const FeaturesPage: React.FC = () => (
   <>
     <Header currentPage="features" setCurrentPage={() => {}} />
-    <main className="min-h-screen pt-12 pb-20 bg-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-extrabold text-gray-900 mb-4 border-b pb-2">Project Features Overview</h1>
-        <p className="text-lg text-gray-600 mb-10">
+    <main className="min-h-screen pt-8 pb-12 bg-white">
+      <div className="max-w-5xl mx-auto px-2 sm:px-4 lg:px-8">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4 border-b pb-2">Project Features Overview</h1>
+        <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-10 break-words">
           Each boilerplate is designed by a full-stack expert to minimize initial friction and enforce scalable, maintainable patterns from day one.
         </p>
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           <FeatureDetail 
             title="React Native (Mobile) - Production Ready"
             icon="📱"
@@ -66,3 +66,5 @@ plop component Button --with-test --with-stories`}
 );
 
 export default FeaturesPage;
+
+// In CodeBlock component, ensure <pre> uses 'overflow-x-auto' and 'break-words' for mobile friendliness.

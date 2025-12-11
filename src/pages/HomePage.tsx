@@ -41,7 +41,7 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
             description="Production-ready boilerplate with integrated Redux/MobX, navigation setup, and a full component library. Includes @tcbs/react-native-mazic-ui."
             icon="📱"
             cta="See Details"
-            onClick={() => setCurrentPage('features')}
+            onClick={() => router.push('/features')}
           >
             <button
               className="text-indigo-600 font-semibold hover:text-indigo-800 transition duration-150 ease-in-out text-left"
@@ -55,21 +55,21 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
             description="Scaffold Express/NestJS APIs with pre-configured authentication, logging, and database connections (TS Ready)."
             icon="⚙️"
             cta="See Details"
-            onClick={() => setCurrentPage('features')}
+            onClick={() => router.push('/features')}
           />
           <FeatureCard 
             title="Next.js App (Full-Stack)"
             description="High-performance web apps with TypeScript, Tailwind CSS, professional component structure, and automatic routing."
             icon="🌐"
             cta="See Details"
-            onClick={() => setCurrentPage('features')}
+            onClick={() => router.push('/features')}
           />
           <FeatureCard 
             title="React App (Frontend)"
             description="A modern frontend starter kit built on React + Vite, ideal for static sites, dashboards, and client-side applications."
             icon="⚛️"
             cta="See Details"
-            onClick={() => setCurrentPage('features')}
+            onClick={() => router.push('/features')}
           />
         </div>
       </section>
