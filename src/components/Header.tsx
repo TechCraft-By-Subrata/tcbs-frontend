@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
               <span style={{ color: colors.primary }}>TCBS</span>-CLI
             </div>
           </div>
-          {/* Navigation Links */}
+          {/* Navigation Links (Desktop) */}
           <nav className="hidden sm:ml-6 sm:flex sm:space-x-4">
             {navItems.map(item => (
               <NavLink key={item.path} {...item} />
@@ -62,6 +62,24 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
             </a>
           </nav>
         </div>
+        {/* Mobile Navigation */}
+        <nav className="flex sm:hidden gap-2 overflow-x-auto py-2">
+          {navItems.map(item => (
+            <NavLink key={item.path} {...item} />
+          ))}
+          <a 
+            href="https://github.com/TechCraft-By-Subrata/tcbs-cli" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ color: colors.text, borderColor: colors.lightText }}
+            className="px-3 py-2 rounded-lg text-sm font-medium hover:text-gray-900 hover:bg-gray-100 transition duration-150 ease-in-out border whitespace-nowrap"
+          >
+            <span className="inline-flex items-center">
+              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+              Repository
+            </span>
+          </a>
+        </nav>
       </div>
     </header>
   );
