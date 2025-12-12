@@ -139,6 +139,80 @@ const TcbsButtonPage: React.FC = () => (
         <h3 className="text-lg font-bold text-indigo-700 mb-2">Summary</h3>
         <p className="text-gray-700">TcbsButton is a robust, flexible component for building interactive, accessible, and visually appealing buttons in React Native. By leveraging its variants, sizes, icon support, and customization options, you can create a consistent and professional user experience across your application.<br/>For a full list of props, refer to the exported <code>TcbsButtonProps</code> type in the package documentation.</p>
       </section>
+      {/* Example Images and Code Section */}
+      <section className="mb-8">
+        <h3 className="text-lg font-bold text-indigo-700 mb-2">Example Buttons Preview</h3>
+        <div className="flex flex-col items-center mb-4">
+          <div className="flex flex-row gap-4 mb-4">
+            <img src="/btnimg1.png" alt="Button Example 1" className="w-32 h-auto object-contain rounded shadow" />
+            <img src="/btnimg2.png" alt="Button Example 2" className="w-32 h-auto object-contain rounded shadow" />
+            <img src="/btnimg3.png" alt="Button Example 3" className="w-32 h-auto object-contain rounded shadow" />
+          </div>
+          <p className="text-gray-600 text-sm mb-2">You can create these buttons using the following code:</p>
+        </div>
+        <CodeBlock language="jsx" copyText={`<TcbsButton\n  title={\"Primary\"}\n  variant=\"primary\"\n  iconName=\"heart\"\n  iconPosition=\"left\"\n  onPress={() => toggleTcbsTheme()}\n/>\n<SizedBox height={metrics.verticalScale(20)} />\n<TcbsButton\n  title=\"Secondary\"\n  variant=\"secondary\"\n  onPress={() => console.log('TCBS Button Pressed')}\n  iconName=\"star\"\n  iconPosition=\"right\"\n/>\n<SizedBox height={metrics.verticalScale(20)} />\n<TcbsButton\n  title=\"No Border\"\n  variant=\"no_border\"\n  onPress={() => setThemeModalVisible(true)}\n  iconName=\"home\"\n  iconPosition=\"left\"\n/>\n<SizedBox height={metrics.verticalScale(40)} />\n<TcbsButton\n  title={\"Primary\"}\n  variant=\"primary\"\n  iconName=\"heart\"\n  iconPosition=\"left\"\n  borderRadius={BORDER_RADIUS.FULL}\n  onPress={() => toggleTcbsTheme()}\n/>\n<SizedBox height={metrics.verticalScale(20)} />\n<TcbsButton\n  title=\"Secondary\"\n  variant=\"secondary\"\n  borderRadius={BORDER_RADIUS.FULL}\n  onPress={() => console.log('TCBS Button Pressed')}\n  iconName=\"star\"\n  iconPosition=\"right\"\n/>\n<SizedBox height={metrics.verticalScale(40)} />\n<TcbsButton\n  title={\"Primary\"}\n  variant=\"primary\"\n  iconName=\"heart\"\n  iconPosition=\"left\"\n  borderRadius={BORDER_RADIUS.NONE}\n  onPress={() => toggleTcbsTheme()}\n/>\n<SizedBox height={metrics.verticalScale(20)} />\n<TcbsButton\n  title=\"Secondary\"\n  variant=\"secondary\"\n  borderRadius={BORDER_RADIUS.NONE}\n  onPress={() => console.log('TCBS Button Pressed')}\n  iconName=\"star\"\n  iconPosition=\"right\"\n/>`}>
+{`<TcbsButton
+  title={"Primary"}
+  variant="primary"
+  iconName="heart"
+  iconPosition="left"
+  onPress={() => toggleTcbsTheme()}
+/>
+<SizedBox height={metrics.verticalScale(20)} />
+<TcbsButton
+  title="Secondary"
+  variant="secondary"
+  onPress={() => console.log('TCBS Button Pressed')}
+  iconName="star"
+  iconPosition="right"
+/>
+<SizedBox height={metrics.verticalScale(20)} />
+<TcbsButton
+  title="No Border"
+  variant="no_border"
+  onPress={() => setThemeModalVisible(true)}
+  iconName="home"
+  iconPosition="left"
+/>
+<SizedBox height={metrics.verticalScale(40)} />
+<TcbsButton
+  title={"Primary"}
+  variant="primary"
+  iconName="heart"
+  iconPosition="left"
+  borderRadius={BORDER_RADIUS.FULL}
+  onPress={() => toggleTcbsTheme()}
+/>
+<SizedBox height={metrics.verticalScale(20)} />
+<TcbsButton
+  title="Secondary"
+  variant="secondary"
+  borderRadius={BORDER_RADIUS.FULL}
+  onPress={() => console.log('TCBS Button Pressed')}
+  iconName="star"
+  iconPosition="right"
+/>
+<SizedBox height={metrics.verticalScale(40)} />
+<TcbsButton
+  title={"Primary"}
+  variant="primary"
+  iconName="heart"
+  iconPosition="left"
+  borderRadius={BORDER_RADIUS.NONE}
+  onPress={() => toggleTcbsTheme()}
+/>
+<SizedBox height={metrics.verticalScale(20)} />
+<TcbsButton
+  title="Secondary"
+  variant="secondary"
+  borderRadius={BORDER_RADIUS.NONE}
+  onPress={() => console.log('TCBS Button Pressed')}
+  iconName="star"
+  iconPosition="right"
+/>
+`}
+        </CodeBlock>
+      </section>
     </div>
   </main>
 );
