@@ -90,7 +90,7 @@ const ClientUiHome = ({ colors }: { colors: any }) => {
           </p>
           <div className="mt-10">
             <h3 className="text-lg font-semibold text-indigo-700 mb-2">Installation</h3>
-            <CodeBlock copyText="npm install @tcbs/react-native-mazic-ui">
+            <CodeBlock command copyText="npm install @tcbs/react-native-mazic-ui">
               {`npm install @tcbs/react-native-mazic-ui`}
             </CodeBlock>
           </div>
