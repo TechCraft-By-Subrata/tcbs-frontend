@@ -75,6 +75,7 @@ const ClientUiHome = ({ colors }: { colors: any }) => {
         >
           <h2 className="text-xl font-bold mb-4 text-indigo-700">Mazic UI Docs</h2>
           <nav className="flex flex-col gap-4">
+            <Link href="/ui-home/apperrorboundary" className="text-indigo-700 hover:underline text-lg font-medium">AppErrorBoundary</Link>
             <Link href="/ui-home/theme" className="text-indigo-700 hover:underline text-lg font-medium">Theme Setup</Link>
             <Link href="/ui-home/tcbsbutton" className="text-indigo-700 hover:underline text-lg font-medium">TcbsButton</Link>
           </nav>
@@ -96,6 +97,9 @@ const ClientUiHome = ({ colors }: { colors: any }) => {
           </div>
 
           <ul className="list-disc pl-6 text-gray-700 text-lg mt-20">
+            <li>
+              <Link href="/ui-home/apperrorboundary" className="text-indigo-700 hover:underline">AppErrorBoundary Component Usage</Link>
+            </li>            
             <li>
               <Link href="/ui-home/theme" className="text-indigo-700 hover:underline">Theme Setup Example</Link>
             </li>
